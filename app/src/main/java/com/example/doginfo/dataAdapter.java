@@ -23,30 +23,24 @@ public class dataAdapter extends ArrayAdapter<Dog>{
     }
 
     public  class  Holder{
-        TextView nameFV;
-        TextView nameSV;
-        TextView phoneV;
+        TextView breedType;
+        TextView dogSize;
+        TextView dogAge;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Get the data item for this position
-
         Dog data = getItem(position);
-        // Check if an existing view is being reused, otherwise inflate the view
-             // view lookup cache stored in tag
         Holder viewHolder;
 
         if (convertView == null) {
-
-
             viewHolder = new Holder();
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.listdogs, parent, false);
 
-            viewHolder.nameFV = (TextView) convertView.findViewById(R.id.txtView1);
-            viewHolder.nameSV = (TextView) convertView.findViewById(R.id.txtView2);
-            viewHolder.phoneV = (TextView) convertView.findViewById(R.id.txtView3);
+            viewHolder.breedType = (TextView) convertView.findViewById(R.id.txtView1);
+            viewHolder.dogSize = (TextView) convertView.findViewById(R.id.textView2);
+            viewHolder.dogAge = (TextView) convertView.findViewById(R.id.textView3);
 
             convertView.setTag(viewHolder);
         } else {
@@ -54,11 +48,9 @@ public class dataAdapter extends ArrayAdapter<Dog>{
         }
 
 
-        viewHolder.nameFV.setText("Breed: "+data.getBreed());
-        viewHolder.nameSV.setText("Dog Size: "+data.getDogSize());
-        viewHolder.phoneV.setText("Age: "+data.getAge());
-
-        // Return the completed view to render on screen
+        viewHolder.breedType.setText("Breed: "+data.getBreed());
+        viewHolder.dogSize.setText("Dog Size: "+data.getDogSize());
+        viewHolder.dogAge.setText("Age: "+data.getAge());
         return convertView;
     }
 

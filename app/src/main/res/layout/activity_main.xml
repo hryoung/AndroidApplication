@@ -13,21 +13,21 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/txt1"
+        android:id="@+id/text1"
         android:hint="Enter Breed"
         android:layout_margin="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/txt2"
+        android:id="@+id/text2"
         android:hint="Enter Dog Size"
         android:layout_margin="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/txt3"
+        android:id="@+id/text3"
         android:hint="Enter Age of Dog"
         android:layout_margin="10dp"/>
 

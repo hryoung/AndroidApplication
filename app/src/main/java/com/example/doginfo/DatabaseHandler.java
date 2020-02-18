@@ -47,17 +47,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Upgrading database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
-        // Drop older table if existed
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_DOGS);
-
-        // Create tables again
         onCreate(db);
     }
 
     /**
      * Insert dog info into database
-     */
+     **/
     public void addDogs(Dog Dog){
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues values=new ContentValues();

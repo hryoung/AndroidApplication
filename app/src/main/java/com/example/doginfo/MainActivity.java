@@ -17,8 +17,8 @@ public class MainActivity extends Activity {
 
     private EditText Breed,dogsize,age;
     private DatabaseHandler db;
-    private String d_breed,d_size,d_age;
-    private  ListView lv;
+    private String dogBreed,dogSize,dogAge;
+    private  ListView listView;
     private dataAdapter data;
     private Dog dataModel;
     private int rowNumber = 0;
@@ -29,19 +29,18 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Instantiate database handler
+
         db=new DatabaseHandler(this);
 
-        lv = (ListView) findViewById(R.id.list1);
+        listView = (ListView) findViewById(R.id.list1);
 
-        Breed=(EditText) findViewById(R.id.txt1);
-        dogsize=(EditText) findViewById(R.id.txt2);
-        age=(EditText) findViewById(R.id.txt3);
+        Breed=(EditText) findViewById(R.id.text1);
+        dogsize=(EditText) findViewById(R.id.text2);
+        age=(EditText) findViewById(R.id.text3);
     }
 
     public void buttonClicked(View v){
         int id=v.getId();
-        System.out.println("get id value for button clicked: " + id);
 
         switch(id){
 
@@ -52,7 +51,7 @@ public class MainActivity extends Activity {
 
             case R.id.display:
 
-                ShowRecords();
+                ShowDogRecords();
                 break;
 
             case R.id.delete:
@@ -69,29 +68,29 @@ public class MainActivity extends Activity {
 
     // function to get values from the Edit text
     private void getValues(){
-        d_breed = Breed.getText().toString();
-        d_size = dogsize.getText().toString();
-        d_age = age.getText().toString();
+        dogBreed = Breed.getText().toString();
+        dogSize = dogsize.getText().toString();
+        dogAge = age.getText().toString();
     }
 
     //Insert data to the database
     private void addDog(){
         getValues();
-        db.addDogs(new Dog(d_breed, d_size, d_age));
+        db.addDogs(new Dog(dogBreed, dogSize, dogAge));
         Toast.makeText(getApplicationContext(),"Saved successfully", Toast.LENGTH_LONG).show();
         closeKeyboard();
     }
 
     //Retrieve data from the database and set to the list view
-    private void ShowRecords(){
+    private void ShowDogRecords(){
 
         final ArrayList<Dog> Dogs = new ArrayList<>(db.getAllDogs());
         data=new dataAdapter(this, Dogs);
         closeKeyboard();
 
-        lv.setAdapter(data);
+        listView.setAdapter(data);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 dataModel = Dogs.get(position);
@@ -104,21 +103,26 @@ public class MainActivity extends Activity {
     private void DeleteDog(){
         int sucessful = 0;
         db.deleteData(rowNumber);
-        sucessful = db.updateDog(new Dog(d_breed, d_size, d_age), rowNumber);
-        System.out.println("returned value: " + sucessful);
+        sucessful = db.updateDog(new Dog(dogBreed, dogSize, dogAge), rowNumber);
+        if(sucessful == 0){
+            Toast.makeText(getApplicationContext(),"Updated successfully", Toast.LENGTH_LONG).show();
+        }
 
     }
     // Search dogs in the database
     private void SearchDogs(){
         getValues();
-        final ArrayList<Dog> dogs = new ArrayList<>(db.searchData(new Dog(d_breed, d_size, d_age)));
+        final ArrayList<Dog> dogs = new ArrayList<>(db.searchData(new Dog(dogBreed, dogSize, dogAge)));
         Toast.makeText(getApplicationContext(),"Searching Data", Toast.LENGTH_LONG).show();
         closeKeyboard();
+        if(dogs.isEmpty()){
+            Toast.makeText(getApplicationContext(),"Database is empty", Toast.LENGTH_LONG).show();
+        }
         data=new dataAdapter(this, dogs);
 
-        lv.setAdapter(data);
+        listView.setAdapter(data);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
