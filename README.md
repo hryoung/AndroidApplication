@@ -7,5 +7,5 @@
 <img src=images/image3.png width= "120">.
 ## Deleting entries in the data base
 <img src=images/image5.png width= "120">
-<img src=images/image6.png width= "120">.
+<img src=images/image6.png width= "120">
 ## Searching through the database based on the dog characteristics 
