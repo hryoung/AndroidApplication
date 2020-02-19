@@ -13,6 +13,6 @@
 <img src=images/image5.png width= "120">
 - Click on the dog entry that you want to remove from the database
 - Click delete
-<img src=images/image6.png width= "120">
-- The dog has been removed from the database.
+<img src=images/image6.png width= "120">.
+- The dog has been removed from the database
 ## Searching through the database based on the dog characteristics 
