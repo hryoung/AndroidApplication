@@ -4,6 +4,6 @@
 ## Saving input to the database
 ![](images/image2.png width = "20")
 ## Displaying list of Dog characteristics
-<img src=images/image3.png width= "20">
+<img src=images/image3.png width= "70">
 ## Deleting entries in the data base
 ## Searching through the database based on the dog characteristics 
