@@ -2,7 +2,7 @@
 - developed an android application for users to input dog characteristics into a database and query through it
 - utilized SQLite to manipulate the database data based on the breed, size, and age
 ## Saving input to the database
-<img src=images/image7.png width= "120">.
+<img src=images/image7.png width= "200">.
 - Type in dog info
 - Click save
 ## Displaying list of Dog characteristics
