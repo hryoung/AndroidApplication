@@ -9,7 +9,7 @@
 <img src=images/image.png width= "120">.
 - Click display
 ## Deleting entries in the data base
-<img src=images/image5.png width= "120"><br/>
+<img src=images/image5.png width= "120"><br/>.
 - Click on the dog that you want to remove from the database
 - Click delete
 <img src=images/image6.png width= "120">.
