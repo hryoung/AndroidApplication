@@ -9,7 +9,7 @@
 <img src=images/image.png width= "200">.
 - Click display
 - New dog info will be displayed 
-## Deleting entries in the data base
+## Deleting entries in the database
 <img src=images/image6.png width= "200">.
 - Click on the dog info that you want to remove from the database
 - Click delete
