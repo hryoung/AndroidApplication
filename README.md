@@ -1,6 +1,6 @@
 # Dog Query Application
-- developed an android application for users to input dog characteristics into a database and query through it
-- utilized SQLite to manipulate the database data based on the breed, size, and age
+- Developed an android application for users to input dog characteristics into a database and query through it
+- Utilized SQLite to manipulate the database data based on the breed, size, and age
 ## Saving input to the database
 <img src=images/image7.png width= "200">.
 - Type in dog info
@@ -14,7 +14,7 @@
 - Click on the dog info that you want to remove from the database
 - Click delete
 - The dog info has been removed from the database
-## Searching through the database based
+## Searching through the database 
 <img src=images/image10.png width= "200">.
 - Searches can be done by breed, size, or age
 - Type in the search information
