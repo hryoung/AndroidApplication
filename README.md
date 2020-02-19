@@ -8,6 +8,7 @@
 ## Displaying list of Dog characteristics
 <img src=images/image.png width= "120">.
 - Click display
+- New dog info will be displayed 
 ## Deleting entries in the data base
 <img src=images/image5.png width= "120"><br/>.
 - Click on the dog that you want to remove from the database
