@@ -14,4 +14,9 @@
 - Click on the dog entry that you want to remove from the database
 - Click delete
 - The dog entry has been removed from the database
-## Searching through the database based on the dog characteristics 
+## Searching through the database based
+<img src=images/image10.png width= "120">.
+- Type the search information
+- Can search by breed, size, or age
+- Click search
+- List of dogs will be displayed based on searched charateristics 
