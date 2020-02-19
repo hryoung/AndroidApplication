@@ -10,4 +10,5 @@
 - click on the dog that you want to remove from the database
 - click delete
 <img src=images/image6.png width= "120">
+- The dog has been removed from the database
 ## Searching through the database based on the dog characteristics 
