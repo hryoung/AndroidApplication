@@ -10,7 +10,7 @@
 - Click display
 - New dog entry will be displayed 
 ## Deleting entries in the data base
-<img src=images/image5.png width= "120">
+<img src=images/image5.png width= "120">.
 - Click on the dog entry that you want to remove from the database
 - Click delete
 <img src=images/image6.png width= "120">.
