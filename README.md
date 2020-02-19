@@ -4,6 +4,6 @@
 ## Saving input to the database
 ![](images/image2.png)
 ## Displaying list of Dog characteristics
-![](images/image4.png)
+![](images/image3.png)
 ## Deleting entries in the data base
 ## Searching through the database based on the dog characteristics 
